@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Sınavı - DersDünyası</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">📐 Matematik</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📊 Matematik Sınavı</h1>
+            <p>20 Soru | Süre: 30 Dakika | Her Soru 5 Puan</p>
+        </div>
+
+        <div id="timerContainer" style="text-align: center; margin-bottom: 30px;">
+            <div class="timer" id="timer">30:00</div>
+        </div>
+
+        <div id="quizContainer" class="quiz-container"></div>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        const examQuestions = [
+            {
+                question: "1. 2x - 8 = 0 ise x kaçtır?",
+                options: ["A) 2", "B) 4", "C) 6", "D) 8"],
+                correctAnswer: 1
+            },
+            {
+                question: "2. Kenarları 3 ve 4 cm olan dikdörtgenin çevresi kaç cm?",
+                options: ["A) 7", "B) 12", "C) 14", "D) 24"],
+                correctAnswer: 2
+            },
+            {
+                question: "3. sin(30°) kaçtır?",
+                options: ["A) 0", "B) 0.5", "C) 0.866", "D) 1"],
+                correctAnswer: 1
+            },
+            {
+                question: "4. f(x) = 3x² + 2x ise f'(x) nedir?",
+                options: ["A) 6x", "B) 6x + 2", "C) 3x + 2", "D) 6x² + 2"],
+                correctAnswer: 1
+            },
+            {
+                question: "5. x² + 4x + 3 = 0 denkleminin kökleri nelerdir?",
+                options: ["A) -1 ve -3", "B) 1 ve 3", "C) -1 ve 3", "D) 1 ve -3"],
+                correctAnswer: 0
+            },
+            {
+                question: "6. Yarıçapı 4 cm olan dairenin alanı kaç cm²? (π≈3.14)",
+                options: ["A) 25.12", "B) 50.24", "C) 12.56", "D) 100.48"],
+                correctAnswer: 1
+            },
+            {
+                question: "7. tan(45°) kaçtır?",
+                options: ["A) 0", "B) 0.5", "C) 1", "D) √2"],
+                correctAnswer: 2
+            },
+            {
+                question: "8. Veri: 1, 2, 3, 4, 5 ise medyan kaçtır?",
+                options: ["A) 1", "B) 2", "C) 3", "D) 4"],
+                correctAnswer: 2
+            },
+            {
+                question: "9. ∫(2x + 1) dx nedir?",
+                options: ["A) x² + x + C", "B) 2x² + x + C", "C) x² + C", "D) 2x + C"],
+                correctAnswer: 0
+            },
+            {
+                question: "10. Bir karenin köşegeninin uzunluğu 5√2 cm ise kenarı kaç cm?",
+                options: ["A) 2.5", "B) 5", "C) 7.5", "D) 10"],
+                correctAnswer: 1
+            },
+            {
+                question: "11. (x + 3)² açılımı nedir?",
+                options: ["A) x² + 6x + 9", "B) x² + 9", "C) x² + 3x + 9", "D) x² + 6x + 6"],
+                correctAnswer: 0
+            },
+            {
+                question: "12. log₁₀(100) kaçtır?",
+                options: ["A) 1", "B) 2", "C) 10", "D) 100"],
+                correctAnswer: 1
+            },
+            {
+                question: "13. Bir üçgenin açıları 45°, 45° ise üçüncü açı kaçtır?",
+                options: ["A) 45°", "B) 90°", "C) 60°", "D) 30°"],
+                correctAnswer: 1
+            },
+            {
+                question: "14. cos(60°) kaçtır?",
+                options: ["A) 0", "B) 0.5", "C) 0.866", "D) 1"],
+                correctAnswer: 1
+            },
+            {
+                question: "15. Standart sapmaya benzer olan kavram nedir?",
+                options: ["A) Ortalama", "B) Medyan", "C) Varyans", "D) Mod"],
+                correctAnswer: 2
+            },
+            {
+                question: "16. 3x + 2 > 11 eşitsizliğinin çözümü nedir?",
+                options: ["A) x > 3", "B) x < 3", "C) x > 2", "D) x < 2"],
+                correctAnswer: 0
+            },
+            {
+                question: "17. Hipotenüsü 10 cm olan dik üçgende bir kenar 6 cm ise diğer kenar kaç cm?",
+                options: ["A) 4", "B) 8", "C) 16", "D) 2"],
+                correctAnswer: 1
+            },
+            {
+                question: "18. (a + b)(a - b) açılımı nedir?",
+                options: ["A) a² + b²", "B) a² - b²", "C) a² + 2ab + b²", "D) a² - 2ab + b²"],
+                correctAnswer: 1
+            },
+            {
+                question: "19. 2⁵ kaçtır?",
+                options: ["A) 10", "B) 16", "C) 32", "D) 64"],
+                correctAnswer: 2
+            },
+            {
+                question: "20. Bir kürenin hacmi = (4/3)πr³ formülüne göre r=1 ise hacim kaç cm³? (π≈3.14)",
+                options: ["A) 3.14", "B) 4.19", "C) 12.56", "D) 25.12"],
+                correctAnswer: 1
+            }
+        ];
+
+        let quiz = new QuizEngine(examQuestions, 30 * 60); // 30 dakika
+        window.quizEngine = quiz;
+        window.quizEngine.courseName = 'Matematik';
+
+        window.addEventListener('load', function() {
+            quiz.startTimer();
+            renderQuestion(quiz);
+        });
+    </script>
+</body>
+</html>

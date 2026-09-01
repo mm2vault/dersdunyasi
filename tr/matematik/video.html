@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Video Dersleri - DersDünyası</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">📐 Matematik</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>🎬 Matematik Video Dersleri</h1>
+            <p>Profesyonel eğitmenlerin anlatımı ile öğren!</p>
+        </div>
+
+        <section class="video-section">
+            <h2>📖 Video Listesi</h2>
+            <div class="video-list">
+                <div class="video-card">
+                    <div class="video-thumbnail">▶️</div>
+                    <div class="video-title">Cebir Giriş - Denklem Çözümü</div>
+                    <div class="video-channel">Kanal: Matematik Öğretmeni</div>
+                    <div class="video-views">👁️ 15.2K görüntüleme</div>
+                    <button onclick="VideoManager.openVideo('wh-TdrLq-hE')" style="margin-top: 10px; width: 100%; padding: 8px; background: #6c63ff; color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ İzle</button>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">▶️</div>
+                    <div class="video-title">Geometri Temel Kavramlar</div>
+                    <div class="video-channel">Kanal: Geometri Dersleri</div>
+                    <div class="video-views">👁️ 12.8K görüntüleme</div>
+                    <button onclick="VideoManager.openVideo('cJlDZ9y6cWY')" style="margin-top: 10px; width: 100%; padding: 8px; background: #6c63ff; color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ İzle</button>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">▶️</div>
+                    <div class="video-title">Trigonometri Başlangıç</div>
+                    <div class="video-channel">Kanal: Matematik Uzmanı</div>
+                    <div class="video-views">👁️ 10.5K görüntüleme</div>
+                    <button onclick="VideoManager.openVideo('WVxg2DbvI94')" style="margin-top: 10px; width: 100%; padding: 8px; background: #6c63ff; color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ İzle</button>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">▶️</div>
+                    <div class="video-title">Türev Kavramı ve Uygulamaları</div>
+                    <div class="video-channel">Kanal: Kalkülüs Dersleri</div>
+                    <div class="video-views">👁️ 8.3K görüntüleme</div>
+                    <button onclick="VideoManager.openVideo('rB83DpBr93s')" style="margin-top: 10px; width: 100%; padding: 8px; background: #6c63ff; color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ İzle</button>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">▶️</div>
+                    <div class="video-title">İntegral Hesabı</div>
+                    <div class="video-channel">Kanal: Kalkülüs Dersleri</div>
+                    <div class="video-views">👁️ 7.1K görüntüleme</div>
+                    <button onclick="VideoManager.openVideo('PkZNo7MFNFg')" style="margin-top: 10px; width: 100%; padding: 8px; background: #6c63ff; color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ İzle</button>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">▶️</div>
+                    <div class="video-title">İstatistik ve Veri Analizi</div>
+                    <div class="video-channel">Kanal: Veri Bilimi</div>
+                    <div class="video-views">👁️ 9.6K görüntüleme</div>
+                    <button onclick="VideoManager.openVideo('zBF-bw5LjqE')" style="margin-top: 10px; width: 100%; padding: 8px; background: #6c63ff; color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ İzle</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="VideoManager.closeVideo()">&times;</span>
+                <iframe id="videoFrame" width="100%" height="500" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <button onclick="window.location.href='index.html'" style="background: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">← Derslere Dön</button>
+        </div>
+
+        <footer class="footer" style="margin-top: 50px;">
+            <p>&copy; 2024 DersDünyası - Video kaynağı: YouTube</p>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
