@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DersDünyası - Türkçe Dersler</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="light-mode">
+    <!-- Gece/Gündüz Modu Butonu -->
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../index.html">🏠 Ana Sayfa</a>
+            <a href="index.html">📚 Türkçe Dersler</a>
+        </div>
+        <div class="language-flags">
+            <button onclick="window.location.href='../../tr/index.html'" title="Türkçe">🇹🇷</button>
+            <button onclick="window.location.href='../../en/index.html'" title="English">🇬🇧</button>
+            <button onclick="window.location.href='../../de/index.html'" title="Deutsch">🇩🇪</button>
+            <button onclick="window.location.href='../../ru/index.html'" title="Русский">🇷🇺</button>
+            <button onclick="window.location.href='../../az/index.html'" title="Azərbaycan">🇦🇿</button>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <h1>📚 Türkçe Dersler</h1>
+            <p>Matematik, Fizik, Kimya, İngilizce ve Programlama</p>
+        </div>
+
+        <!-- Ders Kategorileri -->
+        <section class="featured-courses">
+            <h2>📖 Ders Kategorileri</h2>
+            <div class="courses-grid">
+                <a href="matematik/index.html" class="course-card" style="text-decoration: none; color: inherit;">
+                    <div class="course-icon">📐</div>
+                    <h3>Matematik</h3>
+                    <p>Cebir, Geometri, Trigonometri, Türev ve daha fazla...</p>
+                </a>
+                <a href="fizik/index.html" class="course-card" style="text-decoration: none; color: inherit;">
+                    <div class="course-icon">🔬</div>
+                    <h3>Fizik</h3>
+                    <p>Mekanik, Elektrik, Manyetizma, Optik...</p>
+                </a>
+                <a href="kimya/index.html" class="course-card" style="text-decoration: none; color: inherit;">
+                    <div class="course-icon">🧪</div>
+                    <h3>Kimya</h3>
+                    <p>Atom, Bağlar, Reaksiyonlar, Elektrokimya...</p>
+                </a>
+                <a href="ingilizce/index.html" class="course-card" style="text-decoration: none; color: inherit;">
+                    <div class="course-icon">📖</div>
+                    <h3>İngilizce</h3>
+                    <p>Gramer, Kelime Hazinesi, Konuşma, Yazma...</p>
+                </a>
+                <a href="programlama/index.html" class="course-card" style="text-decoration: none; color: inherit;">
+                    <div class="course-icon">💻</div>
+                    <h3>Programlama</h3>
+                    <p>Python, JavaScript, Web Geliştirme...</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Nasıl Başlarım -->
+        <section class="how-it-works">
+            <h2>🎯 Nasıl Başlarım?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Ders Seçin</h3>
+                    <p>Yukarıdaki derslerden birini seçin.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Konuları Öğrenin</h3>
+                    <p>Her dersin konularını oku ve videoları izle.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Testler ve Sınavlar</h3>
+                    <p>Öğrendiklerini test et ve sınavlara gir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- İstatistikler -->
+        <section class="statistics">
+            <div class="stat-card">
+                <h3>5</h3>
+                <p>Ders Türü</p>
+            </div>
+            <div class="stat-card">
+                <h3>25+</h3>
+                <p>Konu</p>
+            </div>
+            <div class="stat-card">
+                <h3>250+</h3>
+                <p>Test Sorusu</p>
+            </div>
+            <div class="stat-card">
+                <h3>25+</h3>
+                <p>Video Dersi</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 DersDünyası. Tüm hakları saklıdır.</p>
+            <p>Öğrenmeyi herkes için erişilebilir hale getiriyoruz.</p>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
