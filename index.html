@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DersDünyası - Çok Dilli Eğitim Platformu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <!-- Gece/Gündüz Modu Butonu -->
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <!-- Ana Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">🌍 DersDünyası</h1>
+            <p class="main-slogan">Her Dilde Öğren, Her Yerde Başarı Kazan!</p>
+            <p class="sub-slogan">5 dilde dersler, testler, sınavlar ve videolar!</p>
+        </header>
+
+        <!-- İstatistikler -->
+        <section class="statistics">
+            <div class="stat-card">
+                <h3>100+</h3>
+                <p>Ders Konusu</p>
+            </div>
+            <div class="stat-card">
+                <h3>500+</h3>
+                <p>Test Sorusu</p>
+            </div>
+            <div class="stat-card">
+                <h3>50+</h3>
+                <p>Video Dersi</p>
+            </div>
+            <div class="stat-card">
+                <h3>5</h3>
+                <p>Farklı Dil</p>
+            </div>
+        </section>
+
+        <!-- Dil Seçimi -->
+        <section class="language-selection">
+            <h2>📚 Dil Seçiniz</h2>
+            <div class="languages-grid">
+                <a href="tr/index.html" class="lang-card" data-lang="tr">
+                    <span class="flag">🇹🇷</span>
+                    <h3>Türkçe</h3>
+                    <p>Türk Eğitim Sistemi</p>
+                </a>
+                <a href="en/index.html" class="lang-card" data-lang="en">
+                    <span class="flag">🇬🇧</span>
+                    <h3>English</h3>
+                    <p>International Curriculum</p>
+                </a>
+                <a href="de/index.html" class="lang-card" data-lang="de">
+                    <span class="flag">🇩🇪</span>
+                    <h3>Deutsch</h3>
+                    <p>Deutsche Bildung</p>
+                </a>
+                <a href="ru/index.html" class="lang-card" data-lang="ru">
+                    <span class="flag">🇷🇺</span>
+                    <h3>Русский</h3>
+                    <p>Российское Образование</p>
+                </a>
+                <a href="az/index.html" class="lang-card" data-lang="az">
+                    <span class="flag">🇦🇿</span>
+                    <h3>Azərbaycan</h3>
+                    <p>Azərbaycanlı Təhsil</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Nasıl Çalışır -->
+        <section class="how-it-works">
+            <h2>🎯 Nasıl Çalışır?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Dil Seçin</h3>
+                    <p>Yukarıdan kendi dilinizi seçin ve başlayın.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Ders Seçin</h3>
+                    <p>Matematik, Fizik, Kimya, İngilizce ve daha fazla...</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Öğrenin & Test Edin</h3>
+                    <p>Video izleyin, konuları okuyun, testler çözün, sınavlara girin.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Öne Çıkan Dersler -->
+        <section class="featured-courses">
+            <h2>📖 Öne Çıkan Dersler</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">📐</div>
+                    <h3>Matematik</h3>
+                    <p>Cebir, Geometri, Trigonometri, Türev ve daha fazla...</p>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">🔬</div>
+                    <h3>Fizik</h3>
+                    <p>Mekanik, Elektrik, Manyetizma, Optik...</p>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">🧪</div>
+                    <h3>Kimya</h3>
+                    <p>Atom, Bağlar, Reaksiyonlar, Elektrokimya...</p>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">📖</div>
+                    <h3>İngilizce</h3>
+                    <p>Gramer, Kelime Hazinesi, Konuşma, Yazma...</p>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+                    <h3>Programlama</h3>
+                    <p>Python, JavaScript, Web Geliştirme...</p>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">🎬</div>
+                    <h3>Video Dersler</h3>
+                    <p>YouTube'dan profesyonel eğitmenlerin videoları...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Tanıtım -->
+        <section class="premium-section">
+            <h2>✨ Hepsine Sınırsız Erişim</h2>
+            <p>Tüm dersler, testler ve sınavlar tamamen <strong>ÜCRETSIZ</strong></p>
+            <p class="highlight">Hiçbir ödeme, hiçbir sınırlama! 🎉</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 DersDünyası. Tüm hakları saklıdır.</p>
+            <p>Öğrenmeyi herkes için erişilebilir hale getiriyoruz.</p>
+            <p>Platform: <a href="https://github.com/mm2vault/dersdunyasi" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
