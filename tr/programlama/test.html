@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programlama Testi - DersDünyası</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">💻 Programlama</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📝 Programlama Testi</h1>
+            <p>10 Soru | Süre: 15 Dakika</p>
+        </div>
+
+        <div id="timerContainer" style="text-align: center; margin-bottom: 30px;">
+            <div class="timer" id="timer">15:00</div>
+        </div>
+
+        <div id="quizContainer" class="quiz-container"></div>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        const testQuestions = [
+            {
+                question: "1. Python'da değişken tanımlamak için ne kullanılır?",
+                options: ["A) var", "B) = sembolü", "C) let", "D) define"],
+                correctAnswer: 1
+            },
+            {
+                question: "2. JavaScript'te 'let' ve 'var' arasındaki fark nedir?",
+                options: ["A) Hız", "B) Scope", "C) Bağlantı", "D) Tip"],
+                correctAnswer: 1
+            },
+            {
+                question: "3. HTML'de başlık etiketini ne ile yazarız?",
+                options: ["A) <title>", "B) <h1>", "C) <header>", "D) <head>"],
+                correctAnswer: 1
+            },
+            {
+                question: "4. CSS'de renkler hangi formatlarla yazılabilir?",
+                options: ["A) Sadece kelime adı", "B) Hex, RGB, HSL", "C) Sadece hex", "D) Sadece RGB"],
+                correctAnswer: 1
+            },
+            {
+                question: "5. SQL'de 'SELECT * FROM users' sorgusu ne yapar?",
+                options: ["A) İlk kaydı getirir", "B) Tüm kullanıcıları getirir", "C) Son kaydı getirir", "D) Hiçbir şey yapmaz"],
+                correctAnswer: 1
+            },
+            {
+                question: "6. Bir döngü kaç kez çalıştırılmalıdır?",
+                options: ["A) 1 kez", "B) Belirtilen koşula bağlı", "C) Sonsuz", "D) Programcı tarafından belirlenir"],
+                correctAnswer: 1
+            },
+            {
+                question: "7. API tam açılımı nedir?",
+                options: ["A) Application Programming Input", "B) Advanced Programming Interface", "C) Application Programming Interface", "D) Application Process Index"],
+                correctAnswer: 2
+            },
+            {
+                question: "8. JSON'de veri formatı nasıl yazılır?",
+                options: ["A) Sadece string", "B) Anahtar-değer çifti", "C) Sadece sayı", "D) Sadece array"],
+                correctAnswer: 1
+            },
+            {
+                question: "9. Git'te 'commit' ne için kullanılır?",
+                options: ["A) Silmek için", "B) Değişiklikleri kaydetmek için", "C) Yeni dosya oluşturmak", "D) Hataları düzeltmek"],
+                correctAnswer: 1
+            },
+            {
+                question: "10. Bir function'ın geri dönüş değeri ne ile belirtilir?",
+                options: ["A) exit", "B) return", "C) send", "D) output"],
+                correctAnswer: 1
+            }
+        ];
+
+        let quiz = new QuizEngine(testQuestions, 15 * 60);
+        window.quizEngine = quiz;
+
+        window.addEventListener('load', function() {
+            quiz.startTimer();
+            renderQuestion(quiz);
+        });
+    </script>
+</body>
+</html>

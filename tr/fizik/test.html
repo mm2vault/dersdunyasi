@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizik Testi - DersDünyası</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">🔬 Fizik</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📝 Fizik Testi</h1>
+            <p>10 Soru | Süre: 15 Dakika</p>
+        </div>
+
+        <div id="timerContainer" style="text-align: center; margin-bottom: 30px;">
+            <div class="timer" id="timer">15:00</div>
+        </div>
+
+        <div id="quizContainer" class="quiz-container"></div>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        const testQuestions = [
+            {
+                question: "1. Newton'un Birinci Kanunu'na göre, net kuvvet sıfırsa ne olur?",
+                options: ["A) Hızlanır", "B) Hareket durur", "C) Sabit kalır", "D) Ters yönde gider"],
+                correctAnswer: 2
+            },
+            {
+                question: "2. F = ma formülünde m ne temsil eder?",
+                options: ["A) Mesafe", "B) Kütle", "C) Zaman", "D) Hız"],
+                correctAnswer: 1
+            },
+            {
+                question: "3. Işığın hızı yaklaşık kaç m/s?",
+                options: ["A) 300,000", "B) 3,000,000", "C) 30,000", "D) 3,000"],
+                correctAnswer: 0
+            },
+            {
+                question: "4. Potansiyel enerji formülü?",
+                options: ["A) PE = mgh", "B) PE = mv²", "C) PE = ½mv²", "D) PE = F×d"],
+                correctAnswer: 0
+            },
+            {
+                question: "5. Ohm Kanunu ne diyor?",
+                options: ["A) V = IR", "B) V = I/R", "C) I = VR", "D) R = I/V"],
+                correctAnswer: 0
+            },
+            {
+                question: "6. Bir mıknatısın kutupları nelerdir?",
+                options: ["A) Pozitif ve Negatif", "B) Kuzey ve Güney", "C) Sıcak ve Soğuk", "D) Yukça ve Aşağıca"],
+                correctAnswer: 1
+            },
+            {
+                question: "7. Dalga denklemi v = fλ'da λ ne temsil eder?",
+                options: ["A) Frekans", "B) Dalga boyu", "C) Hız", "D) Süre"],
+                correctAnswer: 1
+            },
+            {
+                question: "8. Mutlak sıfır kaç Kelvin?",
+                options: ["A) 0 K", "B) 100 K", "C) 273 K", "D) 373 K"],
+                correctAnswer: 0
+            },
+            {
+                question: "9. Enerji korunumu ilkesine göre enerji ne olur?",
+                options: ["A) Kaybolur", "B) Oluşur", "C) Ne oluşur ne kaybolur, dönüşür", "D) Artar"],
+                correctAnswer: 2
+            },
+            {
+                question: "10. Başlangıç hızı 10 m/s olan bir cisim 2 saniyede kaç metre gider? (g≈10 m/s²)",
+                options: ["A) 10 m", "B) 20 m", "C) 40 m", "D) 30 m"],
+                correctAnswer: 2
+            }
+        ];
+
+        let quiz = new QuizEngine(testQuestions, 15 * 60);
+        window.quizEngine = quiz;
+
+        window.addEventListener('load', function() {
+            quiz.startTimer();
+            renderQuestion(quiz);
+        });
+    </script>
+</body>
+</html>

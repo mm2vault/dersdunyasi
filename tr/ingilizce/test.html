@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İngilizce Testi - DersDünyası</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">📖 İngilizce</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📝 İngilizce Testi</h1>
+            <p>10 Soru | Süre: 15 Dakika</p>
+        </div>
+
+        <div id="timerContainer" style="text-align: center; margin-bottom: 30px;">
+            <div class="timer" id="timer">15:00</div>
+        </div>
+
+        <div id="quizContainer" class="quiz-container"></div>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        const testQuestions = [
+            {
+                question: "1. 'I __ to school every day' cümlesine uygun fiili seçin.",
+                options: ["A) goes", "B) go", "C) going", "D) went"],
+                correctAnswer: 1
+            },
+            {
+                question: "2. Present Perfect hangi zaman için kullanılır?",
+                options: ["A) Geçmiş", "B) Gelecek", "C) Geçmiş ve şimdiki zaman", "D) Sadece şimdiki zaman"],
+                correctAnswer: 2
+            },
+            {
+                question: "3. 'She is __ engineer' boşluğa ne gelmelidir?",
+                options: ["A) a", "B) an", "C) the", "D) -"],
+                correctAnswer: 1
+            },
+            {
+                question: "4. Doktor = Doctor, Öğretmen = ?",
+                options: ["A) Leacher", "B) Teachman", "C) Teacher", "D) Teatcher"],
+                correctAnswer: 2
+            },
+            {
+                question: "5. 'Would you like tea or coffee?' sorusuna en uygun cevap?",
+                options: ["A) Yes", "B) Tea, please", "C) I like it", "D) No, thanks"],
+                correctAnswer: 1
+            },
+            {
+                question: "6. Conditional sentences'de second type'da ne kullanılır?",
+                options: ["A) Present tense", "B) Past tense", "C) Future tense", "D) Past Perfect"],
+                correctAnswer: 1
+            },
+            {
+                question: "7. 'Beautiful' sözcüğünün zıttı nedir?",
+                options: ["A) Pretty", "B) Ugly", "C) Handsome", "D) Nice"],
+                correctAnswer: 1
+            },
+            {
+                question: "8. Passive voice'de 'The cake was eaten by him' cümlesindeki ana fiil?",
+                options: ["A) was", "B) eaten", "C) by", "D) him"],
+                correctAnswer: 1
+            },
+            {
+                question: "9. 'Can you help me?' sorusuna resmi bir şekilde nasıl cevap verirsiniz?",
+                options: ["A) Nope", "B) I'm sorry, I cannot", "C) I cannot", "D) I can't"],
+                correctAnswer: 1
+            },
+            {
+                question: "10. 'I have been studying' hangi zamandır?",
+                options: ["A) Past tense", "B) Future tense", "C) Present Perfect Continuous", "D) Past Perfect"],
+                correctAnswer: 2
+            }
+        ];
+
+        let quiz = new QuizEngine(testQuestions, 15 * 60);
+        window.quizEngine = quiz;
+
+        window.addEventListener('load', function() {
+            quiz.startTimer();
+            renderQuestion(quiz);
+        });
+    </script>
+</body>
+</html>
