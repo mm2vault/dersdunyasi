@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Dersleri - DersDünyası</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <!-- Gece/Gündüz Modu Butonu -->
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">📐 Matematik</a>
+        </div>
+        <div class="language-flags">
+            <button onclick="window.location.href='../../tr/matematik/index.html'" title="Türkçe">🇹🇷</button>
+            <button onclick="window.location.href='../../en/math/index.html'" title="English">🇬🇧</button>
+            <button onclick="window.location.href='../../de/mathe/index.html'" title="Deutsch">🇩🇪</button>
+            <button onclick="window.location.href='../../ru/matematika/index.html'" title="Русский">🇷🇺</button>
+            <button onclick="window.location.href='../../az/riyaziyyat/index.html'" title="Azərbaycan">🇦🇿</button>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <h1>📐 Matematik Dersleri</h1>
+            <p>Temel kavramlardan ileri konulara kadar her şey burada!</p>
+        </div>
+
+        <!-- Konular -->
+        <section class="featured-courses">
+            <h2>📖 Matematik Konuları</h2>
+            <div class="subject-grid">
+                <a href="konu1.html" class="subject-item" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📘</div>
+                    <h3>Cebir</h3>
+                    <p>Denklemler, eşitsizlikler, fonksiyonlar</p>
+                </a>
+                <a href="konu2.html" class="subject-item" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📗</div>
+                    <h3>Geometri</h3>
+                    <p>Şekiller, alan, çevre, hacim</p>
+                </a>
+                <a href="konu3.html" class="subject-item" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📙</div>
+                    <h3>Trigonometri</h3>
+                    <p>Sinüs, kosinüs, tanjant</p>
+                </a>
+                <a href="konu4.html" class="subject-item" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📕</div>
+                    <h3>Türev</h3>
+                    <p>Limit, türev, uygulamaları</p>
+                </a>
+                <a href="konu5.html" class="subject-item" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📔</div>
+                    <h3>İntegral</h3>
+                    <p>Ters türev, belirli integral</p>
+                </a>
+                <a href="konu6.html" class="subject-item" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📓</div>
+                    <h3>İstatistik</h3>
+                    <p>Ortalama, medyan, standart sapma</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Araçlar -->
+        <section style="text-align: center; margin: 40px 0;">
+            <h2>🎯 Çalışma Araçları</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                <a href="test.html" class="subject-item" style="text-decoration: none; color: inherit; padding: 30px;">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📝</div>
+                    <h3>Test Çöz</h3>
+                    <p>10 Soru | 15 Dakika</p>
+                </a>
+                <a href="sinav.html" class="subject-item" style="text-decoration: none; color: inherit; padding: 30px;">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📊</div>
+                    <h3>Sınava Gir</h3>
+                    <p>20 Soru | 30 Dakika</p>
+                </a>
+                <a href="video.html" class="subject-item" style="text-decoration: none; color: inherit; padding: 30px;">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">🎬</div>
+                    <h3>Videoları İzle</h3>
+                    <p>Profesyonel Anlatımlar</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- İlerleme -->
+        <section style="margin: 40px 0; padding: 30px; border-radius: 10px; background: rgba(108, 99, 255, 0.1);">
+            <h2>📈 Senin İlerlemen</h2>
+            <div class="progress-bar" style="margin-bottom: 20px;">
+                <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <p id="progressText">Henüz başlamadın. İlk konuya başla!</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 DersDünyası. Tüm hakları saklıdır.</p>
+            <p>Matematik öğrenmek hiç bu kadar kolay olmamıştı! 🎓</p>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        // İlerleme göster
+        function updateProgress() {
+            const progressTracker = new ProgressTracker();
+            const completed = progressTracker.getCompletedCount();
+            const total = 6;
+            const percent = (completed / total) * 100;
+            
+            document.querySelector('.progress-fill').style.width = percent + '%';
+            document.getElementById('progressText').textContent = `${completed} / ${total} konu tamamlandı`;
+        }
+        
+        updateProgress();
+    </script>
+</body>
+</html>
