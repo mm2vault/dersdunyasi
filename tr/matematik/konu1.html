@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebir - Matematik Dersleri</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">📐 Matematik</a>
+        </div>
+        <div class="language-flags">
+            <button onclick="window.location.href='../../tr/matematik/konu1.html'" title="Türkçe">🇹🇷</button>
+            <button onclick="window.location.href='../../en/math/topic1.html'" title="English">🇬🇧</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📘 Cebir - Denklem Çözümü</h1>
+            <p>Birinci ve ikinci dereceden denklemleri çözmek</p>
+        </div>
+
+        <article style="line-height: 1.8; padding: 30px; background: rgba(108, 99, 255, 0.05); border-radius: 10px;">
+            <h2>📖 Konu Anlatımı</h2>
+            
+            <h3>1. Birinci Dereceden Denklemler</h3>
+            <p>ax + b = 0 şeklindeki denklemleri çözmek için:</p>
+            <ul style="margin-left: 20px;">
+                <li>Sabit terimi diğer tarafa al</li>
+                <li>x'in katsayısına böl</li>
+                <li>Sonuç: x = -b/a</li>
+            </ul>
+
+            <h3>2. İkinci Dereceden Denklemler</h3>
+            <p>ax² + bx + c = 0 şeklindeki denklemleri çözmek için diskriminant kullan:</p>
+            <ul style="margin-left: 20px;">
+                <li>Δ = b² - 4ac (Diskriminant)</li>
+                <li>x = (-b ± √Δ) / 2a</li>
+            </ul>
+
+            <h3>3. Örnek Soru Çözümü</h3>
+            <p><strong>Soru:</strong> 2x² - 5x + 3 = 0 denklemini çöz</p>
+            <p><strong>Çözüm:</strong></p>
+            <ul style="margin-left: 20px;">
+                <li>a = 2, b = -5, c = 3</li>
+                <li>Δ = (-5)² - 4(2)(3) = 25 - 24 = 1</li>
+                <li>x₁ = (5 + 1) / 4 = 1.5</li>
+                <li>x₂ = (5 - 1) / 4 = 1</li>
+            </ul>
+
+            <h2>🎬 Videolu Anlatım</h2>
+            <div style="margin: 20px 0;">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/wh-TdrLq-hE" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <h2>📝 Konuyu Pekiştir (Mini Test)</h2>
+            <div style="background: rgba(0, 0, 0, 0.05); padding: 20px; border-radius: 8px;">
+                <p><strong>Soru 1:</strong> x + 5 = 12 ise x kaçtır?</p>
+                <div style="margin-left: 20px; margin-top: 10px;">
+                    <label><input type="radio" name="q1"> A) 5</label><br>
+                    <label><input type="radio" name="q1"> B) 7 ✓</label><br>
+                    <label><input type="radio" name="q1"> C) 10</label><br>
+                    <label><input type="radio" name="q1"> D) 17</label>
+                </div>
+            </div>
+        </article>
+
+        <div style="margin-top: 30px; display: flex; gap: 10px; justify-content: space-between;">
+            <button onclick="window.location.href='index.html'" style="background: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">← Derslere Dön</button>
+            <button onclick="completeLesson('mat_konu1'); alert('✅ Konu tamamlandı!');" style="background: #4caf50; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">✅ Konuyu Tamamla</button>
+            <button onclick="window.location.href='konu2.html'" style="background: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">Sonraki Konu →</button>
+        </div>
+
+        <footer class="footer" style="margin-top: 50px;">
+            <p>&copy; 2024 DersDünyası</p>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        function completeLesson(lessonId) {
+            const tracker = new ProgressTracker();
+            tracker.completeLesson(lessonId);
+        }
+    </script>
+</body>
+</html>

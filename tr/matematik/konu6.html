@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstatistik - Matematik Dersleri</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">📐 Matematik</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📓 İstatistik - Veri Analizi</h1>
+            <p>Ortalama, medyan, mod ve standart sapma</p>
+        </div>
+
+        <article style="line-height: 1.8; padding: 30px; background: rgba(108, 99, 255, 0.05); border-radius: 10px;">
+            <h2>📖 Konu Anlatımı</h2>
+            
+            <h3>1. Merkezi Eğilim Ölçüleri</h3>
+            <ul style="margin-left: 20px;">
+                <li><strong>Ortalama (Mean):</strong> Tüm değerlerin toplamı / değer sayısı</li>
+                <li><strong>Medyan (Median):</strong> Sıralı verilerin ortasındaki değer</li>
+                <li><strong>Mod (Mode):</strong> En sık tekrarlanan değer</li>
+            </ul>
+
+            <h3>2. Dağılım Ölçüleri</h3>
+            <ul style="margin-left: 20px;">
+                <li><strong>Standart Sapma:</strong> Verilerin ortalamadan ne kadar saçıldığını gösterir</li>
+                <li><strong>Varyans:</strong> Standart sapmanın karesi</li>
+            </ul>
+
+            <h3>3. Örnek</h3>
+            <p>Veri seti: 2, 4, 4, 4, 5, 5, 7, 9</p>
+            <p><strong>Ortalama:</strong> (2+4+4+4+5+5+7+9)/8 = 5</p>
+            <p><strong>Medyan:</strong> (4+5)/2 = 4.5</p>
+            <p><strong>Mod:</strong> 4</p>
+
+            <h2>🎬 Videolu Anlatım</h2>
+            <div style="margin: 20px 0;">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/zBF-bw5LjqE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        <div style="margin-top: 30px; display: flex; gap: 10px; justify-content: space-between;">
+            <button onclick="window.location.href='konu5.html'" style="background: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">← Önceki Konu</button>
+            <button onclick="completeLesson('mat_konu6'); alert('✅ Konu tamamlandı! Tüm matematikkonuları başarıyla tamamladınız!');" style="background: #4caf50; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">✅ Konuyu Tamamla</button>
+            <button onclick="window.location.href='index.html'" style="background: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">Derslere Dön →</button>
+        </div>
+
+        <footer class="footer" style="margin-top: 50px;">
+            <p>&copy; 2024 DersDünyası</p>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        function completeLesson(lessonId) {
+            const tracker = new ProgressTracker();
+            tracker.completeLesson(lessonId);
+        }
+    </script>
+</body>
+</html>

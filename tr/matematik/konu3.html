@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometri - Matematik Dersleri</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="../../index.html">🏠 Ana Sayfa</a>
+            <a href="../index.html">📚 Türkçe Dersler</a>
+            <a href="index.html">📐 Matematik</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📙 Trigonometri - Sinüs, Kosinüs, Tanjant</h1>
+            <p>Dik üçgenlerde trigonometrik oranlar</p>
+        </div>
+
+        <article style="line-height: 1.8; padding: 30px; background: rgba(108, 99, 255, 0.05); border-radius: 10px;">
+            <h2>📖 Konu Anlatımı</h2>
+            
+            <h3>1. Trigonometrik Oranlar</h3>
+            <ul style="margin-left: 20px;">
+                <li><strong>Sinüs (sin):</strong> sin(θ) = Karşı Kenar / Hipotenüs</li>
+                <li><strong>Kosinüs (cos):</strong> cos(θ) = Komşu Kenar / Hipotenüs</li>
+                <li><strong>Tanjant (tan):</strong> tan(θ) = Karşı Kenar / Komşu Kenar</li>
+            </ul>
+
+            <h3>2. Örnek Soru</h3>
+            <p>Dik üçgende bir açı 30° ve hipotenüs 10 cm ise karşı kenar kaç cm?</p>
+            <p><strong>Çözüm:</strong> sin(30°) = 0.5 = Karşı Kenar / 10 → Karşı Kenar = 5 cm</p>
+
+            <h2>🎬 Videolu Anlatım</h2>
+            <div style="margin: 20px 0;">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/WVxg2DbvI94" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <h2>📝 Konuyu Pekiştir (Mini Test)</h2>
+            <div style="background: rgba(0, 0, 0, 0.05); padding: 20px; border-radius: 8px;">
+                <p><strong>Soru 1:</strong> sin(0°) kaçtır?</p>
+                <div style="margin-left: 20px; margin-top: 10px;">
+                    <label><input type="radio" name="q1"> A) 0 ✓</label><br>
+                    <label><input type="radio" name="q1"> B) 0.5</label><br>
+                    <label><input type="radio" name="q1"> C) 1</label><br>
+                    <label><input type="radio" name="q1"> D) -1</label>
+                </div>
+            </div>
+        </article>
+
+        <div style="margin-top: 30px; display: flex; gap: 10px; justify-content: space-between;">
+            <button onclick="window.location.href='konu2.html'" style="background: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">← Önceki Konu</button>
+            <button onclick="completeLesson('mat_konu3'); alert('✅ Konu tamamlandı!');" style="background: #4caf50; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">✅ Konuyu Tamamla</button>
+            <button onclick="window.location.href='konu4.html'" style="background: #6c63ff; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">Sonraki Konu →</button>
+        </div>
+
+        <footer class="footer" style="margin-top: 50px;">
+            <p>&copy; 2024 DersDünyası</p>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        function completeLesson(lessonId) {
+            const tracker = new ProgressTracker();
+            tracker.completeLesson(lessonId);
+        }
+    </script>
+</body>
+</html>
